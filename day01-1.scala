@@ -35,7 +35,6 @@ for (direction <- instructions){ direction match {
   case '(' => floor += 1
   case ')' => floor -= 1
   }
-
 }
 
 println(floor)
