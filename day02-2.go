@@ -38,9 +38,9 @@ func get_amount(dims []string) int {
 	dim1, _ := strconv.Atoi(dims[0])
 	dim2, _ := strconv.Atoi(dims[1])
 	dim3, _ := strconv.Atoi(dims[2])
-  side1 := 2 * (dim1 + dim2)
-  side2 := 2 * (dim1 + dim3)
-  side3 := 2 * (dim3 + dim2)
+	side1 := 2 * (dim1 + dim2)
+	side2 := 2 * (dim1 + dim3)
+	side3 := 2 * (dim3 + dim2)
 	return dim1 * dim2 * dim3 + get_min(side1, get_min(side2, side3))
 }
 

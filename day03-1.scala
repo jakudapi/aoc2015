@@ -19,6 +19,7 @@ For example:
 import scala.io.Source
 import scala.collection.mutable
 
+val startTime = System.nanoTime()
 val houses = mutable.Map((0,0) -> 1)
 val directions  = Source.fromFile("day03input.txt").mkString
 var locX: Int = 0
@@ -35,5 +36,6 @@ for (direction <- directions){
 	locX = newLoc._1 //update Santa's x position
 	locY = newLoc._2 //update Santa's y position
 }
-
+val endTime = System.nanoTime()
 println(s"Houses which got presents: ${houses.size}")
+println(s"This took ${(endTime-startTime)/1000000} milliseconds")
